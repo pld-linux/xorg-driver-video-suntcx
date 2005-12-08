@@ -1,12 +1,12 @@
 Summary:	X.org video driver for Sun TCX video cards
 Summary(pl):	Sterownik obrazu X.org dla kart graficznych Sun TCX
 Name:		xorg-driver-video-suntcx
-Version:	1.0.0.2
+Version:	1.0.0.3
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-video-suntcx-%{version}.tar.bz2
-# Source0-md5:	469421605d4cb9625ab827e211e4091d
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/driver/xf86-video-suntcx-%{version}.tar.bz2
+# Source0-md5:	2bc8bf14284154ad1fa740cbda4dd1f1
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -15,7 +15,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-proto-fontsproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-proto-renderproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 ExclusiveArch:	sparc sparcv9 sparc64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -44,8 +44,7 @@ Sterownik obrazu X.org dla kart graficznych Sun TCX.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	drivermandir=%{_mandir}/man4
+	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
@@ -56,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/suntcx_drv.so
-%{_mandir}/man4/suntcx.4x*
+%{_mandir}/man4/suntcx.4*
