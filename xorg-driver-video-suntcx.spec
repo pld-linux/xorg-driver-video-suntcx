@@ -1,8 +1,8 @@
 Summary:	X.org video driver for Sun TCX video cards
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart graficznych Sun TCX
 Name:		xorg-driver-video-suntcx
-Version:	1.1.0
-Release:	4
+Version:	1.1.1
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-suntcx-%{version}.tar.bz2
